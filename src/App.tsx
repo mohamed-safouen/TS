@@ -1,8 +1,13 @@
 
 import './App.css';
 import { Greet } from './components/Greet';
+import { Heading } from './components/Heading';
+import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import { Status } from './components/Status';
+
+
 
 function App() {
   const PersonName = {
@@ -16,10 +21,14 @@ function App() {
   ];
   return (
     <div className="App">
-      <Greet name="Vishwas" messageCount={10} isLoggedIn= {false}/>
-      <Person name={PersonName}/>
-      <PersonList names={nameList}/>
-
+      <Person name={PersonName} />
+      <PersonList names={nameList} />
+      <Status status="loading" />
+      <Heading> Placeholder Text </Heading>
+      <Oscar>
+        <Heading> Leo </Heading>
+      </Oscar>
+      <Greet name="Vishwas"  isLoggedIn={false} />
     </div>
   );
 }

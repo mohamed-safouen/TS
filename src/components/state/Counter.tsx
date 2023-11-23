@@ -30,7 +30,7 @@ export const Counter =()=>{
     const [state, dispatch] = useReducer (reducer, initialState)
     return (
       <>
-        Count ; {state.count}
+        Count : {state.count}
         <button onClick={() => dispatch({ type: "increment", payload: 10 })}>
           Increment 10
         </button>

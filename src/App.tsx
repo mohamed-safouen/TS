@@ -6,6 +6,8 @@ import { Heading } from './components/Heading';
 import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
 import { Button } from './components/button';
+import { Box } from './components/context/Box';
+import { ThemeContextProvider } from './components/context/ThemeContext';
 
 
 
@@ -28,6 +30,9 @@ function App() {
       <Button handleClick={(event)=>{console.log('clicked',event)}}/>
       <Input value = '' handleChange={(event)=> console.log(event)}/>
       <Container styles={{border:'1px solid black',padding:"1rem"}}/>
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }

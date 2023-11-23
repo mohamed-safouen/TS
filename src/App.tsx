@@ -5,9 +5,6 @@ import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
 import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
-import { Person } from './components/Person';
-import { PersonList } from './components/PersonList';
-import { Status } from './components/Status';
 import { Button } from './components/button';
 
 
@@ -24,10 +21,6 @@ function App() {
   ];
   return (
     <div className="App">
-      <Person name={PersonName} />
-      <PersonList names={nameList} />
-      <Status status="loading" />
-      <Heading> Placeholder Text </Heading>
       <Oscar>
         <Heading> Leo </Heading>
       </Oscar>

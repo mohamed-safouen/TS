@@ -5,7 +5,10 @@ import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
 import { Input } from './components/Input';
 import { Oscar } from './components/Oscar';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
 import { Button } from './components/button';
+import { Counter } from './components/class/Counter';
 import { Box } from './components/context/Box';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { User } from './components/context/User';
@@ -38,6 +41,8 @@ function App() {
       <UserContextProvider>
         <User/>
       </UserContextProvider>
+      <Counter message='Count value is'/>
+      <Private isLoggedIn={true} Component={Profile}/>
     </div>
   );
 }

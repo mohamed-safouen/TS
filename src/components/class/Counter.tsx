@@ -16,7 +16,7 @@ render(){
     return(
         <div>
             <button onClick={this.handleClick}>Increment</button>
-            {this.props.message}{this.state.count}
+             {this.props.message} {this.state.count}
         </div>
     )
 }

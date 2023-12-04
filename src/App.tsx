@@ -13,7 +13,10 @@ import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { User } from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
 import { List } from "./components/generics/List";
+import { CustomButton } from "./components/html/Button";
+import { Text } from "./components/polymorphic/Text";
 import { RandomNumber } from "./components/restrection/RandomNumber";
+import { Toast } from "./components/templateliterals/Toast";
 
 function App() {
   const PersonName = {
@@ -44,15 +47,15 @@ function App() {
       -------------------------------------
       <Container styles={{ border: "1px solid black", padding: "1rem" }} />
       -------------------------------------
-      <ThemeContextProvider>
+      {/*<ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
       -------------------------------------
       <UserContextProvider>
         <User />
-      </UserContextProvider>
+      </UserContextProvider>*/}
       -------------------------------------
-      <Counter message="Count value is" />
+      {/* <Counter message="Count value is" />
       -------------------------------------
       <Private isLoggedIn={true} Component={Profile} />
       -------------------------------------
@@ -70,7 +73,20 @@ function App() {
         onClick={(item) => console.log(item)}
       /> */}
       ------------------------------------------------------------
-      <RandomNumber value={10} isPositive />
+      {/* <RandomNumber value={10} isPositive /> 
+      <Toast position='center'/> */}
+      <CustomButton variant="primary" onClick={() => console.log("clicked")}>
+        Primary Button
+      </CustomButton>
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor='id' size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
